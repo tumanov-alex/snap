@@ -65,7 +65,7 @@ export default function App() {
       const fullSnapsAmountScrollLocation = fullSnapsAmount * SNAP_WIDTH;
       const leftover = Math.abs(startX.value) - Math.abs(fullSnapsAmountScrollLocation);
 
-      if (Math.abs(leftover) >= ITEM_WIDTH / 2) {
+      if (leftover >= ITEM_WIDTH / 2) {
         startX.value = (fullSnapsAmountScrollLocation + SNAP_WIDTH) * -1;
         translationX.value = withTiming(startX.value);
       } else {
